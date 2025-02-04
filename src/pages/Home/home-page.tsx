@@ -17,7 +17,7 @@ export default function Home() {
 
             <SearchForm />
 
-            <div className="grid grid-cols-1 pt-3 gap-2 lg:grid-cols-2 md:pb-20 md:gap-8 md:pt-8">
+            <div className="grid grid-cols-1 pt-3 gap-2 pb-50 lg:grid-cols-2 md:pb-50 md:gap-8 md:pt-8">
               <PostCard />
               <PostCard />
               <PostCard />
