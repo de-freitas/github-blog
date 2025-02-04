@@ -2,11 +2,12 @@ import LogoTemp from "../../../public/Logo.png";
 import imgGithub from "../../../public/github-brands.svg";
 import imgRocketseat from "../../../public/building-solid.svg";
 import imgFollowers from "../../../public/user-group-solid.svg";
+import { Link } from "react-router-dom";
 
 export function Profile() {
   return (
     <>
-      <section className="bg-base-profile md:w-[90%] md:px-8 max-w-864 rounded  mx-auto mt-[-8%] relative lg:mt-[-12%] text-base-text px-2 pb-8 lg:p-12">
+      <section className="bg-base-profile md:w-[90%] md:px-8 max-w-864 rounded-lg  mx-auto mt-[-8%] relative lg:mt-[-12%] text-base-text px-2 pb-8 lg:p-12">
         <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-6">
           <div>
             <img src={LogoTemp} className="h-24" />
@@ -17,7 +18,9 @@ export function Profile() {
               <p className="text-base-title text-xl lg:text-2xl ">
                 Cameron Williamson
               </p>
-              <span className="text-blue">github link</span>
+              <span className="text-blue">
+                <Link to="/post">github link</Link>
+              </span>
             </div>
 
             <div className="text-sm text-justify lg:max-w-[90%] lg:pb-4">

@@ -1,6 +1,6 @@
 export function PostCard() {
   return (
-    <div className=" bg-base-post p-6 md:px-8 max-h-44 lg:max-h-56 gap-10 rounded-md">
+    <div className=" bg-base-post p-6 md:px-8 max-h-44 lg:max-h-56 gap-10 rounded-lg">
       <div className="flex justify-around items-baseline">
         <p className="text-base-title lg:text-lg flex-1 ">
           JavaScript data types and data structure

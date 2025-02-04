@@ -1,5 +1,4 @@
 import { Profile } from "../../components/Profile";
-import DefaultLayout from "../../layouts/default-layout";
 import { PostCard } from "./components/PostCard";
 import { SearchForm } from "./components/SearchForm";
 
@@ -7,8 +6,6 @@ export default function Home() {
   return (
     <>
       <div className="h-screen">
-        <DefaultLayout />
-
         <main className="bg-base-background h-full px-4 md:w-[90%] md:mx-auto max-w-864 ">
           <Profile />
 
