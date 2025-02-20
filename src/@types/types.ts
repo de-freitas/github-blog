@@ -7,3 +7,11 @@ export interface ProfileProps {
   html_url: string;
   type: string;
 }
+
+export interface RepositoriesProps {
+  id: string;
+  title: string;
+  body: string;
+  created_at: string;
+  html_url: string;
+}

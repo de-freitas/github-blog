@@ -1,4 +1,3 @@
-import LogoTemp from "../../../public/Logo.png";
 import imgGithub from "../../../public/github-brands.svg";
 import imgRocketseat from "../../../public/building-solid.svg";
 import imgFollowers from "../../../public/user-group-solid.svg";
