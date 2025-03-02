@@ -64,7 +64,7 @@ export default function Home() {
             <div className="grid grid-cols-1 pt-3 gap-2 pb-50 lg:grid-cols-2 md:pb-50 md:gap-8 md:pt-8">
               {issues
                 ? issues.map((issue) => {
-                    return <PostCard key={issue.id} {...issue} />;
+                    return <PostCard key={issue.number} {...issue} />;
                   })
                 : "no issues in this repo"}
             </div>
