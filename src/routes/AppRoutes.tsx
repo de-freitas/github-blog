@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router";
 import Home from "../pages/Home/home-page";
-import Post from "../pages/Posts/post-page";
+import Issue from "../pages/Issue/issue-page";
 import DefaultLayout from "../layouts/default-layout";
 
 function Fallback() {
@@ -24,7 +24,7 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/post" element={<Post />} />
+          <Route path="/issue/:issueId" element={<Issue />} />
         </Route>
         <Route path="/*" element={<Fallback />} />
       </Routes>

@@ -8,10 +8,11 @@ export interface ProfileProps {
   type: string;
 }
 
-export interface RepositoriesProps {
-  id: string;
+export interface IssuesProps {
+  number: string;
   title: string;
   body: string;
   created_at: string;
   html_url: string;
+  comments: string;
 }

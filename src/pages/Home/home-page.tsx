@@ -1,4 +1,4 @@
-import { ProfileProps, RepositoriesProps } from "../../@types/types";
+import { ProfileProps, IssuesProps } from "../../@types/types";
 import { Profile } from "../../components/Profile";
 import { api } from "../../lib/api";
 import { PostCard } from "./components/PostCard";
@@ -10,7 +10,8 @@ export default function Home() {
   const repo =
     "/search/issues?q=repo:rocketseat-education/reactjs-github-blog-challenge";
   const [profile, setProfile] = useState<ProfileProps>();
-  const [repositories, setRepositories] = useState<RepositoriesProps[]>();
+  const [issues, setIssues] = useState<IssuesProps[]>();
+  const numberOfPublications = issues?.length || 0;
 
   async function fetchProfileData() {
     try {
@@ -28,7 +29,8 @@ export default function Home() {
       const response = await api.get(repo);
       const data = await response.data;
 
-      setRepositories(data.items);
+      setIssues(data.items);
+      console.log(issues);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +40,6 @@ export default function Home() {
     async function fetchData() {
       await fetchProfileData();
       await fetchRepos();
-      console.log(repositories);
     }
     fetchData();
   }, []);
@@ -52,15 +53,18 @@ export default function Home() {
           <div className="flex flex-col pt-6 gap-3 lg:pt-16">
             <div className="flex justify-between items-center">
               <p className="text-sm text-base-subtitle">Publicações</p>
-              <span className="text-base-span text-xs">6 publicações</span>
+              <span className="text-base-span text-xs">
+                {numberOfPublications}{" "}
+                {numberOfPublications > 1 ? "publicações" : "publicação"}
+              </span>
             </div>
 
             <SearchForm />
 
             <div className="grid grid-cols-1 pt-3 gap-2 pb-50 lg:grid-cols-2 md:pb-50 md:gap-8 md:pt-8">
-              {repositories
-                ? repositories.map((repo) => {
-                    return <PostCard key={repo.id} {...repo} />;
+              {issues
+                ? issues.map((issue) => {
+                    return <PostCard key={issue.id} {...issue} />;
                   })
                 : "no issues in this repo"}
             </div>

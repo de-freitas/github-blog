@@ -25,7 +25,9 @@ export function Profile({
             <div className="text-center lg:w-full lg:flex lg:justify-between">
               <p className="text-base-title text-xl lg:text-2xl ">{name}</p>
               <span className="text-blue">
-                <Link to={html_url}>github link</Link>
+                <Link to={html_url} target="_blank">
+                  github link
+                </Link>
               </span>
             </div>
 
