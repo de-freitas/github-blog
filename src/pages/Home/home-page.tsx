@@ -30,7 +30,6 @@ export default function Home() {
       const data = await response.data;
 
       setIssues(data.items);
-      console.log(issues);
     } catch (error) {
       console.log(error);
     }
